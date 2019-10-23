@@ -1,0 +1,46 @@
+---
+output: 
+  html_document
+--- 
+# Rmarkdown introduction
+
+*This chapter originated as a community contribution created by [Shaofeng](https://github.com/wsf375469088){target="_blank"}*
+
+# 1. Overview
+
+# 2. Getting started
+
+### 2.1. Install the package
+
+```{r}
+#install.packages('rmarkdown')
+```
+
+
+### 2.2. Open file
+
+### 2.3. output format
+
+# 3. Markdown syntax
+
+* plain text
+* bold
+* italic
+* list
+* headers
+* hyperlink
+* table
+* equation
+
+# 4. Embeding code
+
+### 4.1. Inline code
+
+### 4.2. Code chunks
+
+### 4.3. Display options
+
+# 5. Rendering
+
+* first way
+* second way
