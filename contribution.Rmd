@@ -2,13 +2,13 @@
 output: 
   html_document
 --- 
-# Rmarkdown introduction
+# Introduction to Rmarkdown
 
 *This chapter originated as a community contribution created by [Shaofeng](https://github.com/wsf375469088){target="_blank"}*
 
-# 1. Overview
+## 1. Overview
 
-# 2. Getting started
+## 2. Getting started
 
 ### 2.1. Install the package
 
@@ -21,7 +21,7 @@ output:
 
 ### 2.3. output format
 
-# 3. Markdown syntax
+## 3. Markdown syntax
 
 * plain text
 * bold
@@ -32,7 +32,7 @@ output:
 * table
 * equation
 
-# 4. Embeding code
+## 4. Embeding code
 
 ### 4.1. Inline code
 
@@ -40,7 +40,7 @@ output:
 
 ### 4.3. Display options
 
-# 5. Rendering
+## 5. Rendering
 
 * first way
 * second way
