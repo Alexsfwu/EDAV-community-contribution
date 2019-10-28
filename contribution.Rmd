@@ -1,6 +1,6 @@
 ---
-output: 
-  html_document
+output:
+  html_document: default
 --- 
 # Introduction to Rmarkdown
 
@@ -25,20 +25,20 @@ This link provide a quick tour of what's possible with R markdown.-[links](https
 
 
 ### 1.2 Workflow
-1 **Open a new .Rmd file** at File ▶ New File ▶ R Markdown. Use the wizard that opens to prepopulate the file with a template\
-2 **Write document** by editing template\
-3 **Knit document** to create report; use knit button or
+(1) **Open a new .Rmd file** at File ▶ New File ▶ R Markdown. Use the wizard that opens to prepopulate the file with a template\
+(2) **Write document** by editing template\
+(3) **Knit document** to create report; use knit button or
 **render()** to knit\
-4 **Preview Output** in IDE window\
-5 **Publish** (optional) to web server\
-6 **Examine build log** in R Markdown console\
-7 **Use output file** that is saved along side .Rmd
+(4) **Preview Output** in IDE window\
+(5) **Publish** (optional) to web server\
+(6) **Examine build log** in R Markdown console\
+(7) **Use output file** that is saved along side .Rmd
 ![Caption](rmarkdownflow.png)
 
 ## 2. Getting started
 
 ### 2.1. Install the package
-
+You can use the following command to install the required library.
 ```{r}
 #install.packages('rmarkdown')
 ```
@@ -53,6 +53,7 @@ library(rmarkdown)
 render("OutputExample.Rmd", output_format = "word_document")
 ```
 **Output value table**
+
 | output value | creates |
 |--------------|---------|
 | html_document| html|
@@ -72,15 +73,7 @@ The RStudio IDE knit button renders a file to the first format listed in its out
 
 ## 3. Markdown syntax
 
-
-
- 
- | Right | Left | Default | Center |
-|------:|:-----|---------|:------:|
-| 12 | 12 | 12 | 12 |
-| 123 | 123 | 123 | 123 |
-| 1 | 1 | 1 | 1 | 
-
+Rmarkdown has lots of fancy syntax so that you can produce an ordered and beautiful document. We will give the syntax here that we regularly use a lot.
 
 * **plain text**    
 plain text
@@ -168,12 +161,46 @@ $$E = mc^{2}$$
 ## 4. Embeding code
 
 ### 4.1. Inline code
+You can surround code with back ticks and r. R will replace inline code with its results.
+
+For example:
+```{r, eval=FALSE}
+  one plus one equals `r 1+1`
+```
+
+The output is:
+
+one plus one equals `r 1+1`
 
 ### 4.2. Code chunks
+In this way, ou need to start a chunk with \`\`\` {r} and end a chunk with \`\`\`
+
+For example:
+```{r}
+print("Hello, world!")
+```
 
 ### 4.3. Display options
+There are also a lot of options to display your codes and results.
+
+Here is a table that includes the options that we normally use:
+
+
+| option | default | effect |
+|--------------|---------|---------|
+| eval | TRUE | Whether to evaluate the code and include its results |
+|echo|TRUE|Whether to display code along with its results|
+|warning|TRUE| Whether to display warnings|
+|error |FALSE |Whether to display errors|
+|message| TRUE |Whether to display messages|
+|tidy| FALSE |Whether to reformat code in a tidy way when displaying it|
+|cache| FALSE| Whether to cache results for future renders|
+|comment| "##" |Comment character to preface results with|
 
 ## 5. Rendering
 
 * first way
+You can run `rmarkdown::render("<file path>")` in the console.
+
 * second way
+You can click the `Knit` button in the top pane and choose the output format that you want.
