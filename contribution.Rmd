@@ -1,10 +1,10 @@
 ---
 output:
   html_document: default
+author:
+  Shaofeng Wu, Mingrui Liu
 --- 
 # Introduction to Rmarkdown
-
-*This chapter originated as a community contribution created by [Shaofeng](https://github.com/wsf375469088){target="_blank"}*
 
 ## 1. Overview
 R Markdown provides a tidy framework for data science. A markdown file can normally help us: \
@@ -38,8 +38,8 @@ This link provide a quick tour of what's possible with R markdown.-[links](https
 
 ### 2.1. Install the package
 You can use the following command to install the required library.
-```{r}
-#install.packages('rmarkdown')
+```{r, eval=FALSE}
+install.packages('rmarkdown')
 ```
 
 
