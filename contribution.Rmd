@@ -7,25 +7,24 @@ output:
 *This chapter originated as a community contribution created by [Shaofeng](https://github.com/wsf375469088){target="_blank"}*
 
 ## 1. Overview
-R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both \
-- **save and execute code**\
+R Markdown provides a tidy framework for data science. A markdown file can normally help us: \
+- **save and execute code that you wrote**\
 - **generate high quality reports that can be shared with an audience**\
 R Markdown documents are fully reproducible and support dozens of static and dynamic output formats.\
 This link provide a quick tour of what's possible with R markdown.-[links](https://vimeo.com/178485416)
 
 
 ### 1.1 What is R Markdown?\
-- **.Rmd files**\
-· An R Markdown(.Rmd) file is a record of your research. It contains the code that a scientist needs to reproduce your work along with the narration that a reader needs to understand your work.\
+- **Rmd files**\
+· An R Markdown(.Rmd) file is a record of your project. It contains the code that your audience needs to reproduce your work as well as all the scripts that your audience can understand what you did.\
 - **Reproducible Research**\
-· At the click of a button, or the type of a command, you can rerun the code in an R Markdown file to reproduce your work and export the results as a finished report.\
+· You can use `Knit` to rerun the code in an R Markdown file to reproduce your work and export the results to be a well-formatted report.\
 - **Dynamic Documents**\
-· You can choose to export the finished report in a variety of formats, including html, pdf, MS Word, or RTF documents; html or pdf based slides, Notebooks, and more.\
-
+· There are a lot of ways to export your report. The formats include html, pdf, MS Word, or RTF documents; html or pdf based slides, Notebooks, and more.\
 
 
 ### 1.2 Workflow
-(1) **Open a new .Rmd file** at File ▶ New File ▶ R Markdown. Use the wizard that opens to prepopulate the file with a template\
+(1) **Open a new .Rmd file** at File ▶ New File ▶ R Markdown. \
 (2) **Write document** by editing template\
 (3) **Knit document** to create report; use knit button or
 **render()** to knit\
@@ -45,13 +44,16 @@ You can use the following command to install the required library.
 
 
 ### 2.2. Open file
+You can create a new file or open existed from the directory that you choose.
 
 ### 2.3. output format
-Set the output_format argument of render to render your .Rmd file into any of R Markdown’s supported formats.For example, the code below renders OutputExample.Rmd to a Microsoft Word document. 
+The Rmarkdown can render any Rmd file into a format that Rmarkdown supports. For example, the code below renders OutputExample.Rmd to a Microsoft Word document. 
 ```{r results='hide'}
 library(rmarkdown)
 render("OutputExample.Rmd", output_format = "word_document")
 ```
+
+Following is a table of all the formats that you can choose:
 **Output value table**
 
 | output value | creates |
@@ -66,14 +68,14 @@ render("OutputExample.Rmd", output_format = "word_document")
 | ioslides_presentation| ioslides HTML slides|
 | slidy_presentation| slidy HTML slides|
 | beamer_presentation| Beamer pdf slides (requires Tex) |
-If you do not select a format, R Markdown renders the file to its default format, which you can set in the output field of a .Rmd file’s header. The header of 1-example.Rmd shows that it renders to an HTML file by default.
 
-The RStudio IDE knit button renders a file to the first format listed in its output field. You can render to additional formats by clicking the dropdown menu beside the knit button:
+You can choose to render to the format that you want by clicking the dropdown menu beside the knit button:
 ![Caption](output.png)
 
 ## 3. Markdown syntax
 
-Rmarkdown has lots of fancy syntax so that you can produce an ordered and beautiful document. We will give the syntax here that we regularly use a lot.
+Rmarkdown has lots of fancy syntax so that you can produce an ordered and beautiful document.\
+We will give the syntax here that we regularly use a lot.
 
 * **plain text**    
 plain text
@@ -183,6 +185,20 @@ print("Hello, world!")
 ### 4.3. Display options
 There are also a lot of options to display your codes and results.
 
+For example, you can choose `eval` as TRUE or False in the output to decide whether to evaluate the code and include its results.
+
+Here is the difference between the two options:
+
+With `eval = TRUE`: 
+```{r eval=TRUE}
+print("Hi there!")
+```
+
+With `eval = FALSE`: 
+```{r eval=FALSE}
+print("Hi there!")
+```
+
 Here is a table that includes the options that we normally use:
 
 
@@ -200,7 +216,9 @@ Here is a table that includes the options that we normally use:
 ## 5. Rendering
 
 * first way
-You can run `rmarkdown::render("<file path>")` in the console.
+
+    You can run `rmarkdown::render("<file path>")` in the console.
 
 * second way
-You can click the `Knit` button in the top pane and choose the output format that you want.
+
+    You can click the `Knit` button in the top pane and choose the output format that you want.
