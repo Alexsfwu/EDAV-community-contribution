@@ -215,10 +215,10 @@ Here is a table that includes the options that we normally use:
 
 ## 5. Rendering
 
-* first way
+* **first way**
 
     You can run `rmarkdown::render("<file path>")` in the console.
 
-* second way
+* **second way**
 
     You can click the `Knit` button in the top pane and choose the output format that you want.
