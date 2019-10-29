@@ -1,10 +1,6 @@
----
-output:
-  html_document: default
-author:
-  Shaofeng Wu, Mingrui Liu
---- 
 # Introduction to Rmarkdown
+
+Author: Shaofeng Wu, Mingrui Liu
 
 ## 1. Overview
 R Markdown provides a tidy framework for data science. A markdown file can normally help us: \
